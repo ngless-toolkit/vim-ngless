@@ -4,10 +4,9 @@
 
 syn keyword nglKeyword ngless import version using
 syn keyword nglSpecial if else discard continue
-syn keyword nglFunctionName fastq paired preprocess map count annotate write print
 syn keyword nglOperator ? : == != > >= < <= + - % * /
 
-syn match nglFunction "\<[a-zA-Z][a-zA-Z0-9_]*\s*(" contains=nglFunctionName
+syn match nglFunction "\<[a-zA-Z][a-zA-Z0-9_]*\s*("
 
 syn region nglString        start=+"+  skip=+\\\\\|\\"+  end=+"+
 syn region nglString        start=+'+  skip=+\\\\\|\\'+  end=+'+
