@@ -2,16 +2,15 @@
 " Language: ngl
 " Maintainer:  Luis Pedro Coelho <luis@luispedro.org>
 
-syn case ignore
-
-syn keyword nglKeyword ngless fastq preprocess map write count annotate
+syn keyword nglKeyword ngless import version using
+syn keyword nglSpecial if else discard continue
+syn keyword nglFunctionName fastq paired preprocess map count annotate write print
 syn keyword nglOperator ? : == != > >= < <= + - % * /
 
 syn match nglFunction "\<[a-zA-Z][a-zA-Z0-9_]*\s*(" contains=nglFunctionName
 
 syn region nglString        start=+"+  skip=+\\\\\|\\"+  end=+"+
 syn region nglString        start=+'+  skip=+\\\\\|\\'+  end=+'+
-syn region nglString        start=+`+  skip=+\\\\\|\\`+  end=+`+
 
 syn match nglSymbol "{[a-zA-Z0-9_]\+}"
 
@@ -53,8 +52,7 @@ if version >= 508 || !exists("did_c_syn_inits")
   HiLink nglAssignVar   Identifier
   HiLink nglString      String
   HiLink nglTodo        Todo
-
-  HiLink nglFunctionName Function
+  HiLink nglFunction    Function
 
 
   delcommand HiLink
