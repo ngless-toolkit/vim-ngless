@@ -2,8 +2,10 @@
 " Language: ngl
 " Maintainer:  Luis Pedro Coelho <luis@luispedro.org>
 
-syn keyword nglKeyword ngless import version using
-syn keyword nglSpecial if else discard continue
+syn keyword nglKeyword using
+syn keyword nglImport ngless import version
+syn keyword nglConditional  discard continue
+syn keyword nglSpecial discard continue
 syn keyword nglOperator ? : == != > >= < <= + - % * /
 
 syn match nglFunction "\<[a-zA-Z][a-zA-Z0-9_]*\s*("
@@ -11,6 +13,7 @@ syn match nglFunction "\<[a-zA-Z][a-zA-Z0-9_]*\s*("
 syn region nglString        start=+"+  skip=+\\\\\|\\"+  end=+"+
 syn region nglString        start=+'+  skip=+\\\\\|\\'+  end=+'+
 
+syn match nglUsingVars "|[a-zA-Z0-9_ ,]\+|"
 syn match nglSymbol "{[a-zA-Z0-9_]\+}"
 
 " Numbers:
@@ -44,10 +47,13 @@ if version >= 508 || !exists("did_c_syn_inits")
   HiLink nglOperator    Operator
   HiLink nglType        Type
   HiLink nglSpecial     Special
+  HiLink nglImport      Include
+  HiLink nglConditional Conditional
   HiLink nglKeyword     Statement
   HiLink nglNumber      Number
   HiLink nglFloat       Float
   HiLink nglSymbol      Constant
+  HiLink nglUsingVars   Constant
   HiLink nglAssignVar   Identifier
   HiLink nglString      String
   HiLink nglTodo        Todo
