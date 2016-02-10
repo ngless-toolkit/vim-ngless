@@ -4,8 +4,8 @@
 
 syn keyword nglKeyword using
 syn keyword nglImport ngless import version
-syn keyword nglConditional  discard continue
-syn keyword nglSpecial discard continue
+syn keyword nglConditional if discard continue
+syn keyword nglSpecial not true false True False
 syn keyword nglOperator ? : == != > >= < <= + - % * /
 
 syn match nglFunction "\<[a-zA-Z][a-zA-Z0-9_]*\s*("
