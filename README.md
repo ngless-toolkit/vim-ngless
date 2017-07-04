@@ -7,3 +7,5 @@ This is compatible with [vundle](https://github.com/VundleVim/Vundle.vim), so
 you should be able to just add the following line to your '.vimrc' file:
 
     Plugin 'luispedro/vim-ngless'
+
+This is also compatible with [neovim](https://neovim.io/).
