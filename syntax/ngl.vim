@@ -3,7 +3,7 @@
 " Maintainer:  Luis Pedro Coelho <luis@luispedro.org>
 
 syn keyword nglKeyword using
-syn keyword nglImport ngless import version
+syn keyword nglImport ngless local import version
 syn keyword nglConditional if discard continue
 syn keyword nglSpecial not true false True False
 syn keyword nglOperator ? : == != > >= < <= + - % * /
